@@ -1,8 +1,19 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World.gd" type="Script" id=4]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 68.2272, 104.533, 0, 0, 0, 0, 374.659, 104.533, 0, 0, 0, 0, 483.538, 320.046, 0, 0, 0, 0, 82.8192, 335.76, 0, 0, 0, 0, 68.2272, 104.533 )
+}
 
 [node name="World" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 190.566, 117.155 )
+position = Vector2( 173.729, 46.4399 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 30, 0 )
+curve = SubResource( 1 )

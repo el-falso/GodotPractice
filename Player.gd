@@ -15,3 +15,5 @@ func _process(delta):
 	position.x += xMove * SPEED * delta;
 	position.y += yMove * SPEED * delta;
 	
+
+	
